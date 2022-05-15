@@ -7,7 +7,6 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.workDataOf
 
-//interface WhereAreYouUtils {
 fun sendDataToServer(targetContext:Context, urldata: String, jsondata: String) {
     Log.d("WhereAreYou", "Send $jsondata to $urldata.")
 
