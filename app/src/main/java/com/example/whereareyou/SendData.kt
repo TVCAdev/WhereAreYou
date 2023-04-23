@@ -26,8 +26,8 @@ class SendData(appContext: Context, workerParams: WorkerParameters) : Worker(app
         val connection = URL(urldata).openConnection() as HttpsURLConnection
         try {
             // configure parameter
-            connection.connectTimeout = 10000       // timeout before connection
-            connection.readTimeout = 10000          // timeout for reading data
+            connection.connectTimeout = 60000       // timeout before connection
+            connection.readTimeout = 60000          // timeout for reading data
             connection.requestMethod = "POST"       // method
             connection.doOutput = true              // use body data
             connection.setChunkedStreamingMode(0)   // the body length is not known in advance

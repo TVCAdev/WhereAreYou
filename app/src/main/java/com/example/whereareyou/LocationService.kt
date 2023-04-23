@@ -39,7 +39,7 @@ class LocationService : FirebaseMessagingService() {
                     Log.d("WhereAreYou",
                         "Location latitude: ${location.latitude} longitude : ${location.longitude}")
 
-                    sendDataToServer(this, postURL,
+                    sendDataToServer(this, BuildConfig.POST_URL,
                         "{\"latitude\":\"${location.latitude}\",\"longitude\":\"${location.longitude}\"}")
 
                 } else {
@@ -53,7 +53,7 @@ class LocationService : FirebaseMessagingService() {
         Log.d("WhereAreYou", "Refreshed token: $token")
 
         // send token
-        sendDataToServer(this, postURL, "{\"token\":\"$token\"}")
+        sendDataToServer(this, BuildConfig.POST_URL, "{\"token\":\"$token\"}")
     }
 
     override fun onDestroy() {

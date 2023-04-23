@@ -25,7 +25,7 @@ class BootReceiver  : BroadcastReceiver() {
             Log.d("WhereAreYou", "Current token: $token")
 
             // send token
-            sendDataToServer(context, postURL, "{\"token\":\"$token\"}")
+            sendDataToServer(context, BuildConfig.POST_URL, "{\"token\":\"$token\"}")
         })
     }
 }
